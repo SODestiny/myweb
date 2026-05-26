@@ -1,13 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title> 个人网站 </title>
-   <link rel="stylesheet" href="/myweb/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #2d3436;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column
+        }
+
+        header {
+            background: linear-gradient(135deg, #4a90d9, #357abd);
+            color: #fff;
+            text-align: center;
+            padding: 2.5rem 1rem
+        }
+
+        header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            letter-spacing: -0.5px
+        }
+
+        header p {
+            opacity: .85;
+            margin-top: .5rem;
+            font-size: 1.05rem
+        }
+
+        main {
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1.2rem;
+            flex: 1
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+        }
+
+        .card h2 {
+            color: #4a90d9;
+            margin-bottom: .6rem;
+            font-size: 1.35rem
+        }
+
+        .card p,
+        .card li {
+            color: #555;
+            font-size: .98rem;
+            margin-bottom: .4rem
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0
+        }
+
+        .card li a {
+            color: #2d3436;
+            text-decoration: none;
+            border-bottom: 1px dashed #4a90d9;
+            transition: color .2s
+        }
+
+        .card li a:hover {
+            color: #4a90d9
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: .8rem;
+            padding: .55rem 1.4rem;
+            background: #4a90d9;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: .9rem;
+            transition: background .2s
+        }
+
+        .btn:hover {
+            background: #357abd
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #999;
+            font-size: .85rem;
+            border-top: 1px solid #e9ecef
+        }
+    </style>
 </head>
+
 <body>
-   <h1>欢迎来到我的世界</h1>
-   <a href="files/原则之衣食住行.pdf" target="_blank">下载/查看我的简历（PDF）</a>
+    <header>
+        <h1>👋 欢迎来到我的网站</h1>
+        <p>分享想法 · 记录成长 · 连接世界</p>
+    </header>
+    <main>
+        <div class="card">
+            <h2>📌 关于我</h2>
+            <p>热爱技术、设计与写作。这里是我的数字花园，记录学习笔记与生活灵感。</p>
+            <a href="#" class="btn">了解更多</a>
+        </div>
+        <div class="card">
+            <h2>📝 最新文章</h2>
+            <ul>
+                <li><a href="files/原则之衣食住行.pdf" target="_blank">下载/查看原则之衣食住行（PDF）</a></li>
+                <li><a href="files/人生艰难如何才能过得好一点呢 .pdf" target="_blank">下载/查看 人生艰难如何才能过得好一点呢 （PDF）</a></li>
+                <li><a href="files/三条法则提升日常工作效率.pdf" target="_blank">下载/查看 三条法则提升日常工作效率（PDF）</a></li>
+            </ul>
+            <a href="#" class="btn">阅读更多文章 →</a>
+        </div>
+        <div class="card">
+            <h2>📬 联系我</h2>
+            <p>欢迎通过邮件或社交媒体交流想法，一起碰撞灵感的火花。</p>
+            <a href="#" class="btn">发送邮件</a>
+        </div>
+    </main>
+    <footer>© 2026 MySite · 由 GitHub Pages 驱动</footer>
 </body>
+
 </html>
